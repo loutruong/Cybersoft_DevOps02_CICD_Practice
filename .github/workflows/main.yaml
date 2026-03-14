@@ -20,8 +20,8 @@
 #         uses: appleboy/ssh-action@v1.0.3
 #         with:
 #           host: "${{secrets.VPS_HOST}}"
-#           username: ${{ vars.VPS_USER }}
-#           key: ${{ secrets.VPS_KEY }}
+#           username: "${{vars.VPS_USER}}"
+#           key: "${{secrets.VPS_KEY}}"
 #           script: |
 #             cd /root/docker
 #             git pull
