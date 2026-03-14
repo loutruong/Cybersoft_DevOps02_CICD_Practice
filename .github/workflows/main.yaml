@@ -19,7 +19,7 @@
 #       - name: Deploy to production server
 #         uses: appleboy/ssh-action@v1.0.3
 #         with:
-#           host: ${{ secrets.VPS_HOST }}
+#           host: "${{secrets.VPS_HOST}}"
 #           username: ${{ vars.VPS_USER }}
 #           key: ${{ secrets.VPS_KEY }}
 #           script: |
