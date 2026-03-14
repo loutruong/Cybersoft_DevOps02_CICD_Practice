@@ -66,10 +66,10 @@ jobs:
         if: $(( ${{needs.job_1.outputs.data}} ${{needs.job_2.outputs.data}} )) == 3
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: ${{vars.MAIL_SERVER_ENDPOINT_URL}}
-          server_port: ${{vars.MAIL_SERVER_ENDPOINT_PORT}}
-          username: ${{vars.MAIL_SERVER_USER_NAME}}
-          password: ${{vars.MAIL_SERVER_APPLICATION_PASSWORD}}
+          server_address: "${{vars.MAIL_SERVER_ENDPOINT_URL}}"
+          server_port: "${{vars.MAIL_SERVER_ENDPOINT_PORT}}"
+          username: "${{vars.MAIL_SERVER_USER_NAME}}"
+          password: "${{secrets.MAIL_SERVER_APPLICATION_PASSWORD}}"
           subject: "Đây là tiêu đề gửi từ githubv action"
           body: "API trả về 200, kèm file response.json"
           to: thanhvantruong.vn@gmail.com
